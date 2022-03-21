@@ -9,15 +9,10 @@
 		<div class="col-6">
 			<div class="card">
 				<div class="row">
-					<div class="col-3">
-						Correo:
-					</div>
-					<div class="col-9">
+					<div class="col-12">
 						<mat-form-field appearance="outline">
-							<mat-label>Direccion de correo</mat-label>
-							<input matInput placeholder="Placeholder">
-							<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-							<mat-hint>Hint</mat-hint>
+							<mat-label>Dirección de correo</mat-label>
+							<input matInput placeholder="jose@correo.com" [(ngModel)]="usuario.correo">
 						</mat-form-field>
 					</div>
 				</div>
@@ -59,10 +54,10 @@
 					  </select>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-12">
-						<a href="http://localhost:4200/" class="button b1">Grabar</a>
-						  <a href="http://localhost:4200/" class="button b2">Cancelar</a>
+				<div class="row pt-2">
+					<div class="col-12 text-end">
+						<button type="button" class="btn btn-primary" (click)="grabar();">Grabar</button>
+						<button type="button" class="btn btn-link">Cancelar</button>
 					</div>
 				</div>
 			</div>

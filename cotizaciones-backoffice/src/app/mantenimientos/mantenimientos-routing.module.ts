@@ -6,8 +6,8 @@ import { UsuarioEditarPage } from './pages/usuario-editar/usuario-editar.page';
 
 
 export const MANTENIMIENTOS_COMPONENTS = [
-    //PrincipalComponent,
-    //ContainerInsideComponent
+    UsuarioListadoPage,
+    UsuarioEditarPage
 ]
 
 const routes: Routes = 

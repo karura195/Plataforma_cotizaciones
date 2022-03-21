@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioEditarPage implements OnInit {
 
+	usuario:any = { correo: "", nombre: "", apellidos: "", rolId: 1, estadoId: 1 };
+
     constructor() { }
 
     ngOnInit() 
@@ -15,4 +17,7 @@ export class UsuarioEditarPage implements OnInit {
 
     }
 
+	grabar():void {
+		alert("1");
+	}
 }
