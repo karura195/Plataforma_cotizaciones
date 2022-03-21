@@ -18,6 +18,10 @@ export class UsuarioEditarPage implements OnInit {
     }
 
 	grabar():void {
-		alert("1");
+		alert("Usuario grabado");
+	}
+
+    cancelar():void {
+		alert("¿Desea cancelar?");
 	}
 }
