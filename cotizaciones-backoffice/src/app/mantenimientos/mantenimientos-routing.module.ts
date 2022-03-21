@@ -4,12 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { UsuarioListadoPage } from './pages/usuario-listado/usuario-listado.page';
 import { UsuarioEditarPage } from './pages/usuario-editar/usuario-editar.page';
 import { ProductoEditarPage } from './pages/producto-editar/producto-editar.page';
+import { ServicioEditarPage } from './pages/servicio-editar/servicio-editar.page';
 
 
 export const MANTENIMIENTOS_COMPONENTS = [
     UsuarioListadoPage,
     UsuarioEditarPage,
-    ProductoEditarPage
+    ProductoEditarPage,
+    ServicioEditarPage
 ]
 
 const routes: Routes = 
@@ -30,6 +32,10 @@ const routes: Routes =
             {
                 path:'producto/editar/:id',
                 component: ProductoEditarPage
+            },
+            {
+                path:'servicio/editar/:id',
+                component: ServicioEditarPage
             }
         ]
     }
