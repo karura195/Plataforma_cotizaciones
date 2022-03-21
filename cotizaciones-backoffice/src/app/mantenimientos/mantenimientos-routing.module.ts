@@ -5,6 +5,7 @@ import { UsuarioListadoPage } from './pages/usuario-listado/usuario-listado.page
 import { UsuarioEditarPage } from './pages/usuario-editar/usuario-editar.page';
 import { ProductoEditarPage } from './pages/producto-editar/producto-editar.page';
 import { ServicioEditarPage } from './pages/servicio-editar/servicio-editar.page';
+import { ContainerInsideComponent } from '../shared/components/container-inside/container-inside.component';
 
 
 export const MANTENIMIENTOS_COMPONENTS = [
@@ -18,7 +19,7 @@ const routes: Routes =
 [
     {
         path:'mantenimientos',
-        //component: ContainerInsideComponent,
+        component: ContainerInsideComponent,
         children:
         [
             {

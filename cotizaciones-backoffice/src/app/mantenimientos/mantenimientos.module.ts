@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 import { MantenimientosRoutingModule, MANTENIMIENTOS_COMPONENTS } from "./mantenimientos-routing.module";
+import { UsuarioService } from './services/usuario.service';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { MantenimientosRoutingModule, MANTENIMIENTOS_COMPONENTS } from "./manten
         MantenimientosRoutingModule
     ],
     providers:[
-        //SecurityService
+        UsuarioService
     ],
     declarations: 
     [

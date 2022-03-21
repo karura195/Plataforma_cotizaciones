@@ -56,12 +56,14 @@ import { CdkTableModule } from '@angular/cdk/table';
 //import { SecurityService } from './services/security.service';
 //import { CommonService } from './services/common.service';
 
-//import { ContainerInsideComponent } from './components/containers/container-inside/container-inside.component';
+import { ContainerInsideComponent } from './components/container-inside/container-inside.component';
+import { ContainerOutsideComponent } from './components/container-outside/container-outside.component';
 
 
 @NgModule({
 	declarations: [
-		//ContainerInsideComponent
+		ContainerInsideComponent,
+		ContainerOutsideComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -143,7 +145,8 @@ import { CdkTableModule } from '@angular/cdk/table';
 		MatToolbarModule,
 		//MatTooltipModule,
 
-		//ContainerInsideComponent
+		ContainerInsideComponent,
+		ContainerOutsideComponent,
 	],
 	providers: [
 		//HeaderService,
