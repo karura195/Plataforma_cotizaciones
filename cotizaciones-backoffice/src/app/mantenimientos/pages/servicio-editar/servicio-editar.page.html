@@ -1,0 +1,72 @@
+<section class="container">
+	<div class="row">
+		<div class="col-12">
+			<h2>Mantenimiento de Servicio</h2>
+		</div>
+	</div>
+    
+	<div class="row justify-content-md-center">
+		<div class="col-6">
+			<div class="card">
+				<div class="row">
+					<div class="col-12">
+						<mat-form-field appearance="outline">
+							<mat-label>Código</mat-label>
+							<input matInput placeholder="Código de servicio" [(ngModel)]="servicio.codigo">
+						</mat-form-field>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<mat-form-field appearance="outline">
+							<mat-label>Nombre</mat-label>
+							<input matInput placeholder="Nombre de servicio" [(ngModel)]="servicio.nombre">
+						</mat-form-field>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<mat-form-field appearance="outline">
+							<mat-label>Descripción</mat-label>
+							<input matInput placeholder="Descripción" [(ngModel)]="servicio.descripcion">
+						</mat-form-field>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<mat-form-field appearance="outline">
+                            <mat-label>Categoría</mat-label>
+                            <mat-select [(ngModel)]="servicio.categoriaId">
+                                <mat-option value="1">Alquiler de zonas y coches</mat-option>
+                                <mat-option value="2">Música</mat-option>
+                                <mat-option value="3">Multimedia</mat-option>
+                                <mat-option value="4">Personal externo</mat-option>
+                                <mat-option value="5">Decoración flores y velas</mat-option>
+                                <mat-option value="6">Suite para novios</mat-option>
+                                <mat-option value="7">Productos para restaurante y cocina</mat-option>
+                                <mat-option value="8">Productos de limpieza</mat-option>
+                                <mat-option value="9">Servicios a pagar por evento</mat-option>
+                                <mat-option value="10">Cortesías fiestas de promoción</mat-option>
+                                <mat-option value="11">Toldeado y mobiliario terceros</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+					</div>
+				</div>
+                <div class="row">
+					<div class="col-12">
+						<mat-form-field appearance="outline">
+							<mat-label>Costo</mat-label>
+							<input matInput placeholder="Costo en soles" [(ngModel)]="servicio.costo">
+						</mat-form-field>
+					</div>
+				</div>
+				<div class="row pt-2">
+					<div class="col-12 text-end d-grid gap-2 d-md-flex justify-content-md-end">
+						<button type="button" class="btn btn-danger me-md-2" (click)="grabar();">Grabar</button>
+						<button type="button" class="btn btn-danger" (click)="cancelar();">Cancelar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
