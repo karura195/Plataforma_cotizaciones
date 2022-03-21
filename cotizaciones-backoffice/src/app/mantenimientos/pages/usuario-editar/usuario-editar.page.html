@@ -1,30 +1,73 @@
-<body>
-    <h1>Mantenimiento de Usuario</h1>
-    <h2>Usuario nuevo</h2>
-<section class="section-1" id="sec-ea6a">
-      <div class="container">
-          <p class="input-text">Correo: <input type="text" name="correo"/></p>
-          <p class="input-text">Nombres: <input type="text" name="nombres"/></p>
-          <p class="input-text">Apellidos: <input type="text" name="apellidos"/></p>
-          <p class="input-text">Rol: 
-         <select name="categoria">
-              <option>Administrador</option>
-              <option>Gerente</option>
-        </select>
-      </p>
-      <p class="input-text">Estado: 
-         <select name="categoria">
-              <option>Activo</option>
-              <option>De baja</option>
-        </select>
-      </p>
-          <p class="input-text">Costo: <input type="text" name="costo"/></p>
-      </div>
-      <a href="http://localhost:4200/" class="button b1">Grabar</a>
-      <a href="http://localhost:4200/" class="button b2">Cancelar</a>
-  <footer>
-      <a href="https://www.clubhotelcusco.com/" target="_blank">
-      <img src="https://www.clubhotelcusco.com/img/logo-black.png" alt="Club Hotel Cusco"></a>
-  </footer>
+<section class="container">
+	<div class="row">
+		<div class="col-12">
+			<h2>Mantenimiento de Usuario</h2>
+		</div>
+	</div>
+    
+	<div class="row justify-content-md-center">
+		<div class="col-6">
+			<div class="card">
+				<div class="row">
+					<div class="col-3">
+						Correo:
+					</div>
+					<div class="col-9">
+						<mat-form-field appearance="outline">
+							<mat-label>Direccion de correo</mat-label>
+							<input matInput placeholder="Placeholder">
+							<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+							<mat-hint>Hint</mat-hint>
+						</mat-form-field>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						Nombres:
+					</div>
+					<div class="col-9">
+						<input type="text" name="nombres"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						Apellidos:
+					</div>
+					<div class="col-9">
+						<input type="text" name="apellidos"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						Rol:
+					</div>
+					<div class="col-9">
+						<select name="categoria">
+							<option>Administrador</option>
+							<option>Gerente</option>
+					  </select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						Estado:
+					</div>
+					<div class="col-9">
+						<select name="categoria">
+							<option>Activo</option>
+							  <option>De baja</option>
+					  </select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<a href="http://localhost:4200/" class="button b1">Grabar</a>
+						  <a href="http://localhost:4200/" class="button b2">Cancelar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
 </section>
-</body>
