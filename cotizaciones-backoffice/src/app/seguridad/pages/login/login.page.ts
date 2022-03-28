@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 //import { UsuarioService } from '../../services/usuario.service';
@@ -10,15 +11,15 @@ import Swal from 'sweetalert2';
 })
 export class LoginPage implements OnInit {
 
-	constructor() { }
+	constructor(private router:Router) { }
 
 	ngOnInit() 
 	{
 
 	}
 
-	grabar():void {
-		
+	login():void {
+		this.router.navigate(['/home']);
 	}
 
 	cancelar():void {

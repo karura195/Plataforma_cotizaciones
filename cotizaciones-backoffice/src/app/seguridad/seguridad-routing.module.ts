@@ -3,21 +3,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginPage } from './pages/login/login.page';
 import { OlvideContrasenaPage } from './pages/olvide-contrasena/olvide-contrasena.page';
-import { ContainerInsideComponent } from '../shared/components/container-inside/container-inside.component';
+import { ContainerOutsideComponent } from '../shared/components/container-outside/container-outside.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 
 export const SEGURIDAD_COMPONENTS = [
-	//UsuarioListadoPage,
-	//UsuarioEditarPage,
-	//ProductoEditarPage,
-	//ServicioEditarPage
+	LoginPage,
+	OlvideContrasenaPage,
+
+	LoginFormComponent
 ]
 
 const routes: Routes = 
 [
 	{
 		path:'',
-		component: ContainerInsideComponent,
+		component: ContainerOutsideComponent,
 		children:
 		[
 			{

@@ -71,6 +71,7 @@ import { ContainerOutsideComponent } from './components/container-outside/contai
 		BrowserModule,
 		CommonModule,
 		FormsModule,
+		//ReactiveFormsModule,
 		HttpClientModule,
 		RouterModule,
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 import { UsuarioService } from '../../services/usuario.service';
 
@@ -29,7 +31,7 @@ export class UsuarioListadoPage implements OnInit {
 
 	filtro: string = "";
 
-    constructor(private usuarioService: UsuarioService) { }
+    constructor(private usuarioService: UsuarioService, private router:Router) { }
 
     ngOnInit() 
     {
@@ -51,12 +53,16 @@ export class UsuarioListadoPage implements OnInit {
 	}
 
 	nuevo(): void {
-
+		this.router.navigate(['/mantenimientos/usuario/editar/0']);
 	}
 	editar(): void {
-		
+		this.router.navigate(['/mantenimientos/usuario/editar/5']);
 	}
 	eliminar(): void {
-		
+		Swal.fire({
+			icon: 'error',
+			title: "ERROR",
+			text: "Error al eliminar el usuario. Este usuario debe tener cotizaciones registradas."
+		});
 	}
 }

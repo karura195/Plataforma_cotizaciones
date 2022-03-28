@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from '../shared/shared.module';
 
-import { SeguridadRoutingModule, SEGURIDAD_COMPONENTS } from "./seguridad-routing.module";
+import { GeneralRoutingModule, GENERAL_COMPONENTS } from "./general-routing.module";
 //import { UsuarioService } from './services/usuario.service';
 
 
@@ -15,14 +15,14 @@ import { SeguridadRoutingModule, SEGURIDAD_COMPONENTS } from "./seguridad-routin
 		FormsModule,
 		ReactiveFormsModule,
 		SharedModule,
-		SeguridadRoutingModule
+		GeneralRoutingModule
 	],
 	providers:[
 		//UsuarioService
 	],
 	declarations: 
 	[
-		SEGURIDAD_COMPONENTS
+		GENERAL_COMPONENTS
 	]
 })
-export class SeguridadModule { }
+export class GeneralModule { }
