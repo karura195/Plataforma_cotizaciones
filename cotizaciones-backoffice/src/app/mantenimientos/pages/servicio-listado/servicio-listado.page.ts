@@ -6,15 +6,20 @@ export interface PeriodicElement {
 	Nombre: string;
 	codigo: number;
 	Unidad: string;
-	Rendimiento: string;
 	Costo: number;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-	{codigo: 1, Nombre: 'Champagna', Unidad: 'Botella', Rendimiento: '6 vasos', Costo: 45},
-	{codigo: 2, Nombre: 'Gaseosa', Unidad: 'Botella', Rendimiento: '8 vasos', Costo: 5},
-	{codigo: 3, Nombre: 'Bocadito', Unidad: 'Fuente', Rendimiento: '50', Costo: 30},
-	{codigo: 4, Nombre: 'Segundo de cerdo', Unidad: 'Plato', Rendimiento: '1', Costo: 12},
-];
+  }
+  const ELEMENT_DATA: PeriodicElement[] = [
+	{codigo: 501, Nombre: 'Alquiler terrazas', Unidad: 'Dia', Costo: 650},
+	{codigo: 502, Nombre: 'Alquiler Coche', Unidad: 'Dia', Costo: 350},
+	{codigo: 503, Nombre: 'Alquiler Equipo musical', Unidad: 'Dia', Costo: 500},
+	{codigo: 504, Nombre: 'Alquiler Luces discoteca', Unidad: 'Dia', Costo: 350},
+	{codigo: 505, Nombre: 'Alquiler Laptop', Unidad: 'Dia', Costo: 100},
+	{codigo: 506, Nombre: 'Bartender', Unidad: 'Jornada', Costo: 80},
+	{codigo: 507, Nombre: 'Cantante', Unidad: 'Hora', Costo: 300},
+	{codigo: 508, Nombre: 'DJ', Unidad: 'Jornada', Costo: 350},
+	{codigo: 509, Nombre: 'Escenario Hotel', Unidad: 'Dia', Costo: 800},
+	{codigo: 510, Nombre: 'Maestro de ceremonias', Unidad: 'Dia', Costo: 400},
+  ];
 
 @Component({
 	selector: 'app-servicio-listado',
@@ -23,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ServicioListadoPage implements OnInit {
 
-	displayedColumns: string[] = ['position', 'Nombre', 'Correo', 'Rol', 'Estado'];
+	displayedColumns: string[] = ['codigo', 'Nombre', 'Unidad', 'Costo'];
 	dataSource = ELEMENT_DATA;
 
 	filtro: string = "";
