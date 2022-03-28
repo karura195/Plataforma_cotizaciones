@@ -60,6 +60,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 
 import { ContainerInsideComponent } from './components/container-inside/container-inside.component';
 import { ContainerOutsideComponent } from './components/container-outside/container-outside.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -87,6 +88,7 @@ import { ContainerOutsideComponent } from './components/container-outside/contai
 		//MatChipsModule,
 		MatStepperModule,
 		MatDatepickerModule,
+		MatNativeDateModule,
 		MatDialogModule,
 		//MatDividerModule,
 		MatExpansionModule,
@@ -125,6 +127,7 @@ import { ContainerOutsideComponent } from './components/container-outside/contai
 		//MatChipsModule,
 		MatStepperModule,
 		MatDatepickerModule,
+		MatNativeDateModule,
 		MatDialogModule,
 		//MatDividerModule,
 		MatExpansionModule,
@@ -154,6 +157,7 @@ import { ContainerOutsideComponent } from './components/container-outside/contai
 		ContainerOutsideComponent,
 	],
 	providers: [
+		MatDatepickerModule
 		//HeaderService,
 		//AlertService,
 		//SecurityService,

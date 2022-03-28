@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
-import { UsuarioService } from '../../services/usuario.service';
+//import { UsuarioService } from '../../services/usuario.service';
+
 
 export interface PeriodicElement {
 	Nombre: string;
@@ -20,20 +21,20 @@ export interface PeriodicElement {
   ];
 
 @Component({
-    selector: 'app-usuario-listado',
-    templateUrl: './usuario-listado.page.html',
-    styleUrls: ['./usuario-listado.page.scss']
+    selector: 'app-cotizacion-panel-general',
+    templateUrl: './panel-general.page.html',
+    styleUrls: ['./panel-general.page.scss']
 })
-export class UsuarioListadoPage implements OnInit {
+export class PanelGeneralPage implements OnInit {
 
 	displayedColumns: string[] = ['position', 'Nombre', 'Correo', 'Rol', 'Estado'];
 	dataSource = ELEMENT_DATA;
 
 	selectedRow: any = null;
-
+	
 	filtro: string = "";
 
-    constructor(private usuarioService: UsuarioService, private router:Router) { }
+    constructor(private router:Router) { }
 
     ngOnInit() 
     {
@@ -42,7 +43,7 @@ export class UsuarioListadoPage implements OnInit {
 
 	buscar(): void {
 
-		this.usuarioService.listado(this.filtro).subscribe(
+		/*this.usuarioService.listado(this.filtro).subscribe(
 			(response) => {
 				if (response != null && response.ok && response.data) {
 					this.dataSource = response.data;
@@ -51,24 +52,24 @@ export class UsuarioListadoPage implements OnInit {
 			(error) => {
 				alert("Error al obtener los datos");
 			}
-		)
+		)*/
 	}
 
 	selectRow(event: any, item: any): void {
 		this.selectedRow = item;
 	}
 
-	nuevo(): void {
-		this.router.navigate(['/mantenimientos/usuario/editar/0']);
+	solicitud(): void {
+		this.router.navigate(['/cotizaciones/cotizacion-inicial']);
 	}
-	editar(): void {
-		this.router.navigate(['/mantenimientos/usuario/editar/5']);
+	cotizacion(): void {
+		this.router.navigate(['/cotizaciones/cotizacion']);
 	}
 	eliminar(): void {
 		Swal.fire({
 			icon: 'error',
 			title: "ERROR",
-			text: "Error al eliminar el usuario. Este usuario debe tener cotizaciones registradas."
+			text: "Error al eliminar la cotización. No se puede eliminar una cotizacion en proceso."
 		});
 	}
 }

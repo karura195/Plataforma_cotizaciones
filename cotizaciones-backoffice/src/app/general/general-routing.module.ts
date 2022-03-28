@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ContainerInsideComponent } from '../shared/components/container-inside/container-inside.component';
-import { HomePage } from './pages/home.page';
-
-
+import { HomePage } from './pages/home/home.page';
 
 
 export const GENERAL_COMPONENTS = [

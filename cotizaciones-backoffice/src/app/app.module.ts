@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MantenimientosModule } from './mantenimientos/mantenimientos.module';
 import { SeguridadModule } from './seguridad/seguridad.module';
 import { GeneralModule } from './general/general.module';
+import { CotizacionesModule } from './cotizaciones/cotizaciones.module';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,10 @@ import { GeneralModule } from './general/general.module';
     AppRoutingModule,
 	BrowserAnimationsModule,
 	//SharedModule,
+	GeneralModule,
 	SeguridadModule,
 	MantenimientosModule,
-	GeneralModule
+	CotizacionesModule
   ],
   providers: [],
   bootstrap: [AppComponent],
