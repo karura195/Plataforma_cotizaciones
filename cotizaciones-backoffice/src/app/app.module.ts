@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //import { SharedModule } from './shared/shared.module';
 import { MantenimientosModule } from './mantenimientos/mantenimientos.module';
+import { SeguridadModule } from './seguridad/seguridad.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MantenimientosModule } from './mantenimientos/mantenimientos.module';
     AppRoutingModule,
 	BrowserAnimationsModule,
 	//SharedModule,
+	SeguridadModule,
 	MantenimientosModule
   ],
   providers: [],

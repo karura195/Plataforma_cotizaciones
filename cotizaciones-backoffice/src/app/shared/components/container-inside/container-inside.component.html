@@ -1,36 +1,61 @@
-<mat-toolbar color="accent" class="example-toolbar">
-	<button mat-icon-button color="primary" (click)="sidenav.toggle()">
-		<mat-icon>menu</mat-icon>
-	</button>
-	<!--h1 class="example-app-name">Crédito Salsa ({{appVersion}}) - Comercio</h1-->
-	<!--img src="/assets/images/logo-green.png" class="logo" style="visibility: hidden;" /-->
-	Credito Samba ({{appVersion}}) - Logista
-</mat-toolbar>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+	<mat-toolbar color="primary" class="example-toolbar">
+		<button mat-icon-button (click)="sidenav.toggle()">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<!--h1 class="example-app-name">Crédito Salsa ({{appVersion}}) - Comercio</h1-->
+		<!--img src="/assets/images/logo-green.png" class="logo" style="visibility: hidden;" /-->
+		Club Hotel Cuzco ({{appVersion}})
+	</mat-toolbar>
 
-<mat-sidenav-container class="example-container">
-	<mat-sidenav #sidenav mode="side" [(opened)]="opened">
-		<mat-nav-list>
-			<a mat-list-item routerLink="/business/new-evaluation" (click)="close()" style="color: #ffffff;">Novo crédito</a>
-			<a mat-list-item routerLink="/business/evaluations" (click)="close()" style="color: #ffffff;">Lista de créditos</a>
-			<mat-divider></mat-divider>
-			<a mat-list-item routerLink="/business/change-password" (click)="close()" style="color: #ffffff;">Alterar a senha</a>
-			<!--a mat-list-item routerLink="/login">Salir</a-->
-		</mat-nav-list>
+	<mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+		<mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+			fixedTopGap="56">
 
-		<div class="exit">
-			<button mat-raised-button color="accent" (click)="logout()">Logout</button>
-		</div>
-
-		<div class="version">
-			<div>
-				Version {{appVersion}}
+			<mat-list>
+				<div mat-subheader>
+					Cotizaciones
+				</div>
+				<mat-list-item (click)="goto('/cotizaciones/listado')">
+					<mat-icon mat-list-icon>arrow_right</mat-icon> Listado
+				</mat-list-item>
+				<mat-divider></mat-divider>
+				<div mat-subheader>
+					Mantenimientos
+				</div>
+				<mat-list-item (click)="goto('/mantenimientos/plantilla/listado')">
+					<mat-icon mat-list-icon>arrow_right</mat-icon> Plantillas
+				</mat-list-item>
+				<mat-list-item (click)="goto('/mantenimientos/producto/listado')">
+					<mat-icon mat-list-icon>arrow_right</mat-icon> Productos
+				</mat-list-item>
+				<mat-list-item (click)="goto('/mantenimientos/servicio/listado')">
+					<mat-icon mat-list-icon>arrow_right</mat-icon> Servicios
+				</mat-list-item>
+				<mat-divider></mat-divider>
+				<div mat-subheader>
+					Seguridad
+				</div>
+				<mat-list-item (click)="goto('/mantenimientos/usuario/listado')">
+					<mat-icon mat-list-icon>arrow_right</mat-icon> Usuarios
+				</mat-list-item>
+			</mat-list>
+			
+			<div class="exit">
+				<button mat-raised-button color="accent" (click)="logout()">Logout</button>
 			</div>
-		</div>
-	</mat-sidenav>
-  
-	<mat-sidenav-content>
-		<div class="body-container">
-			<router-outlet></router-outlet>
-		</div>
-	</mat-sidenav-content>
-  </mat-sidenav-container>
+
+			<div class="version">
+				<div>
+					Versión {{appVersion}}
+				</div>
+			</div>
+		</mat-sidenav>
+
+		<mat-sidenav-content>
+			<div class="body-container">
+				<router-outlet></router-outlet>
+			</div>
+		</mat-sidenav-content>
+	</mat-sidenav-container>
+</div>
