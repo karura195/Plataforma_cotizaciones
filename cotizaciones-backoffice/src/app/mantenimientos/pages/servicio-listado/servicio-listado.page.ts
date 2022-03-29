@@ -1,44 +1,41 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 import { ServicioService } from '../../services/servicio.service';
 
 export interface PeriodicElement {
 	Nombre: string;
 	codigo: number;
-	Unidad: string;
 	Costo: number;
   }
   const ELEMENT_DATA: PeriodicElement[] = [
-	{codigo: 501, Nombre: 'Alquiler terrazas', Unidad: 'Dia', Costo: 650},
-	{codigo: 502, Nombre: 'Alquiler Coche', Unidad: 'Dia', Costo: 350},
-	{codigo: 503, Nombre: 'Alquiler Equipo musical', Unidad: 'Dia', Costo: 500},
-	{codigo: 504, Nombre: 'Alquiler Luces discoteca', Unidad: 'Dia', Costo: 350},
-	{codigo: 505, Nombre: 'Alquiler Laptop', Unidad: 'Dia', Costo: 100},
-	{codigo: 506, Nombre: 'Bartender', Unidad: 'Jornada', Costo: 80},
-	{codigo: 507, Nombre: 'Cantante', Unidad: 'Hora', Costo: 300},
-	{codigo: 508, Nombre: 'DJ', Unidad: 'Jornada', Costo: 350},
-	{codigo: 509, Nombre: 'Escenario Hotel', Unidad: 'Dia', Costo: 800},
-	{codigo: 510, Nombre: 'Maestro de ceremonias', Unidad: 'Dia', Costo: 400},
+	{codigo: 1, Nombre: 'Alquiler de sillas', Costo: 6},
+	{codigo: 2, Nombre: 'Bartender', Costo: 60},
+	{codigo: 3, Nombre: 'Flores en techo', Costo: 300},
+	{codigo: 4, Nombre: 'Pista de baile', Costo: 800},
   ];
 
 @Component({
-	selector: 'app-servicio-listado',
-	templateUrl: './servicio-listado.page.html',
-	styleUrls: ['./servicio-listado.page.scss']
+    selector: 'app-servicio-listado',
+    templateUrl: './servicio-listado.page.html',
+    styleUrls: ['./servicio-listado.page.scss']
 })
 export class ServicioListadoPage implements OnInit {
 
-	displayedColumns: string[] = ['codigo', 'Nombre', 'Unidad', 'Costo'];
+	displayedColumns: string[] = ['codigo', 'Nombre', 'Costo'];
 	dataSource = ELEMENT_DATA;
+
+	selectedRow: any = null;
 
 	filtro: string = "";
 
-	constructor(private servicioService: ServicioService) { }
+    constructor(private servicioService: ServicioService, private router:Router) { }
 
-	ngOnInit() 
-	{
+    ngOnInit() 
+    {
 
-	}
+    }
 
 	buscar(): void {
 
@@ -54,13 +51,17 @@ export class ServicioListadoPage implements OnInit {
 		)
 	}
 
-	nuevo(): void {
+	selectRow(event: any, item: any): void {
+		this.selectedRow = item;
+	}
 
+	nuevo(): void {
+		this.router.navigate(['/mantenimientos/servicio/editar/0']);
 	}
 	editar(): void {
-		
+		this.router.navigate(['/mantenimientos/servicio/editar/5']);
 	}
 	eliminar(): void {
-		
+		alert("¿Desea eliminar el servicio?");
 	}
 }

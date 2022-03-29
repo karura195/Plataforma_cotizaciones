@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
@@ -10,8 +11,10 @@ import Swal from 'sweetalert2';
 })
 export class CotizacionInicialPage implements OnInit {
 
-	usuario:any = { correo: "", nombre: "", apellidos: "", rolId: 1, estadoId: 1 };
-
+	usuario:any = { nombre: "", apellidos: "", correo: "", doc: "", razSoc: "", celular: "" };
+	evento:any = { fecha: "", motivo: "", plantilla: 1, horario: 1, invitados: "" };
+	alimentacion: FormGroup;
+	
 	constructor(private router:Router) { }
 
 
@@ -20,6 +23,7 @@ export class CotizacionInicialPage implements OnInit {
 
 	}
 
+	
 	grabar():void {
 
 		Swal.fire({

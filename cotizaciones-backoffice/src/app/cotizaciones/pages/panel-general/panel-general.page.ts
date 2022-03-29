@@ -6,18 +6,17 @@ import Swal from 'sweetalert2';
 
 
 export interface PeriodicElement {
-	Nombre: string;
+	Cliente: string;
 	position: number;
-	Correo: string;
-	Rol: string;
+	Fecha: string;
 	Estado: string;
   }
   const ELEMENT_DATA: PeriodicElement[] = [
-	{position: 1, Nombre: 'Juan Perez', Correo: 'juan.perez@clubhotelcusco.com', Rol: 'Recepcionista', Estado: 'Activo'},
-	{position: 2, Nombre: 'Lita Reyna', Correo: 'lita.reyna@clubhotelcusco.com', Rol: 'Recepcionista', Estado: 'Activo'},
-	{position: 3, Nombre: 'Placido Domingo', Correo: 'placido.domingo@clubhotelcusco.com', Rol: 'Recepcionista', Estado: 'Activo'},
-	{position: 4, Nombre: 'El pepe', Correo: 'el.pepe@clubhotelcusco.com', Rol: 'Recepcionista', Estado: 'De baja'},
-	{position: 5, Nombre: 'Maria Ochoa', Correo: 'mari.ochoa@clubhotelcusco.com', Rol: 'Recepcionista', Estado: 'Activo'},
+	{position: 1, Cliente: 'Juan Perez', Fecha: '06/08/22', Estado: 'Pendiente'},
+	{position: 2, Cliente: 'Lita Reyna', Fecha: '18/08/22', Estado: 'Pendiente'},
+	{position: 3, Cliente: 'Placido Domingo', Fecha: '04/09/22', Estado: 'Aprobado'},
+	{position: 4, Cliente: 'El pepe', Fecha: '23/09/22', Estado: 'Rechazado'},
+	{position: 5, Cliente: 'Maria Ochoa', Fecha: '12/03/22', Estado: 'Enviado'},
   ];
 
 @Component({
@@ -27,7 +26,7 @@ export interface PeriodicElement {
 })
 export class PanelGeneralPage implements OnInit {
 
-	displayedColumns: string[] = ['position', 'Nombre', 'Correo', 'Rol', 'Estado'];
+	displayedColumns: string[] = ['position', 'Cliente', 'Fecha', 'Estado'];
 	dataSource = ELEMENT_DATA;
 
 	selectedRow: any = null;

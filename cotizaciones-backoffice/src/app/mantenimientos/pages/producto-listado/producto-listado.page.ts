@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 import { ProductoService } from '../../services/producto.service';
 
@@ -23,12 +25,14 @@ export interface PeriodicElement {
 })
 export class ProductoListadoPage implements OnInit {
 
-	displayedColumns: string[] = ['position', 'Nombre', 'Correo', 'Rol', 'Estado'];
+	displayedColumns: string[] = ['codigo', 'Nombre', 'Unidad', 'Rendimiento', 'Costo'];
 	dataSource = ELEMENT_DATA;
+
+	selectedRow: any = null;
 
 	filtro: string = "";
 
-    constructor(private productoService: ProductoService) { }
+    constructor(private productoService: ProductoService, private router:Router) { }
 
     ngOnInit() 
     {
@@ -49,11 +53,15 @@ export class ProductoListadoPage implements OnInit {
 		)
 	}
 
-	nuevo(): void {
+	selectRow(event: any, item: any): void {
+		this.selectedRow = item;
+	}
 
+	nuevo(): void {
+		this.router.navigate(['/mantenimientos/producto/editar/0']);
 	}
 	editar(): void {
-		
+		this.router.navigate(['/mantenimientos/producto/editar/5']);
 	}
 	eliminar(): void {
 		
