@@ -66,8 +66,8 @@ export class UsuarioListadoPage implements OnInit {
 	}
 	eliminar(): void {
 		Swal.fire({
-			icon: 'error',
-			title: "ERROR",
+			icon: 'info',
+			title: "INFO",
 			text: "Error al eliminar el usuario. Este usuario debe tener cotizaciones registradas."
 		});
 	}
