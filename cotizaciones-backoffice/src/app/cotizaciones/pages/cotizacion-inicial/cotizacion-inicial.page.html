@@ -127,21 +127,86 @@
 			<div class="card">
 				<h3>Requerimientos</h3>
 				<div class="row">
-					<div class="col-6" [formGroup]="alimentacion">
+					<div class="col-6">
 						<h4>Alimentación</h4>
-						<p><mat-checkbox formControlName="aperitivo">Licor de aperitivo (ingreso)</mat-checkbox></p>
-						<p><mat-checkbox formControlName="brindis">Brindis de Champagne</mat-checkbox></p>
-						<p><mat-checkbox formControlName="entrada">Entrada</mat-checkbox></p>
+						<mat-checkbox color="primary">Licor de aperitivo (ingreso)</mat-checkbox>
+						<mat-checkbox color="primary">Brindis de Champagne</mat-checkbox>
+						<mat-checkbox color="primary">Entrada</mat-checkbox>
+						<section class="platos-section">
+							<span class="platos-list-section">
+							  <mat-checkbox class="platos-margin"
+											[checked]="allComplete"
+											[color]="task.color"
+											[indeterminate]="someComplete()"
+											(change)="setAll($event.checked)">
+								{{task.name}}
+							  </mat-checkbox>
+							</span>
+							<span class="platos-list-section">
+							  <ul>
+								<li *ngFor="let subtask of task.subtasks">
+								  <mat-checkbox [(ngModel)]="subtask.completed"
+												[color]="subtask.color"
+												(ngModelChange)="updateAllComplete()">
+									{{subtask.name}}
+								  </mat-checkbox>
+								</li>
+							  </ul>
+							</span>
+						  </section>
+						<mat-checkbox color="primary">Postre</mat-checkbox>
+						<mat-checkbox color="primary">Almuerzo/Cena para niños</mat-checkbox>
+						<mat-checkbox color="primary">Torta</mat-checkbox>
+						<mat-checkbox color="primary">Ronda de piqueos para jóvenes (brocheta, chicharrón, tequeños y chicha)</mat-checkbox>
+						<mat-checkbox color="primary">Mesa de quesos y fiambres</mat-checkbox>
+						<mat-checkbox color="primary">Mesa de chocolatería fina, bocaditos y confites</mat-checkbox>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
+				<div class="row">
+					<div class="col-6">
+						<h4>Equipamiento y animación</h4>
+						<mat-checkbox color="primary">Equipo de sonido para terraza</mat-checkbox>
+						<mat-checkbox color="primary">Micros</mat-checkbox>
+						<mat-checkbox color="primary">Proyecto multimedia para presentación de video durante el evento</mat-checkbox>
+						<mat-checkbox color="primary">Maestro de ceremonias</mat-checkbox>
+						<mat-checkbox color="primary">Bartender</mat-checkbox><br>
+						<mat-checkbox color="primary">Hora loca</mat-checkbox>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<h4>Florería</h4>
+						<mat-checkbox color="primary">Flores en centro de mesa y en ingreso recepción</mat-checkbox>
+						<mat-checkbox color="primary">Flores en puente piscina</mat-checkbox>
+						<mat-checkbox color="primary">Flores en bajada de escalera</mat-checkbox>
+						<mat-checkbox color="primary">Flores en mesa principal</mat-checkbox>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<h4>Comedor y Terrazas</h4>
+						<mat-checkbox color="primary">Comedor</mat-checkbox>
+						<mat-checkbox color="primary">Terrazas</mat-checkbox>
+						<mat-checkbox color="primary">Ambos</mat-checkbox>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<mat-form-field appearance="outline">
+							<mat-label>Otros Requerimientos</mat-label>
+							<input matInput placeholder="otro requerimiento"	>
+						</mat-form-field>
+					</div>
+				</div>
 				<div class="row pt-2">
 					<div class="col-12 text-end d-grid gap-2 d-md-flex justify-content-md-end">
 						<button type="button" class="btn btn-danger me-md-2" (click)="grabar();">Grabar</button>
 						<button type="button" class="btn btn-danger" (click)="cancelar();">Cancelar</button>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+				
 		
 </section>
