@@ -22,9 +22,15 @@ div.container{
     margin: auto;
 }
 
-legend{
-    font-size: small;
-}
+mat-checkbox {
+    margin: 0 12px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-top: 4px;
+  }
+
 .button{
     background-color: #9e1517d8;
     color: #ffffff;

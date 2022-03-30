@@ -1,16 +1,22 @@
-<mat-card>
-	<mat-card-title>Login</mat-card-title>
+<section class="container">
+	<div class="row">
+		<div class="col-12">
+			<h2>Ingreso a Plataforma de Cotizaciones</h2>
+		</div>
+	
+<div class="main-div">
+<mat-card class="login-card">
 	<mat-card-content>
 		<form [formGroup]="form" (ngSubmit)="submit()">
 			<p>
 				<mat-form-field>
-				<input type="text" matInput placeholder="Username" formControlName="username">
+				<input type="text" matInput placeholder="Usuario" formControlName="username">
 				</mat-form-field>
 			</p>
 
 			<p>
 				<mat-form-field>
-				<input type="password" matInput placeholder="Password" formControlName="password">
+				<input type="password" matInput placeholder="Contraseña" formControlName="password">
 				</mat-form-field>
 			</p>
 
@@ -19,9 +25,14 @@
 			</p>
 
 			<div class="button">
-				<a mat-button routerLink="/olvide-contrasena" target="_blank">Olvide contraseña</a>
-				<button type="submit" mat-button color="accent">Login</button>
+				<a mat-button color="primary" routerLink="/olvide-contrasena" target="_blank">Olvidé mi contraseña</a>
+				<button type="submit" mat-raised-button color="warn">Ingresar</button>
 			</div>
 		</form>
 	</mat-card-content>
 </mat-card>
+</div>
+
+<footer><a href="https://www.clubhotelcusco.com/" target="_blank"><img src="https://www.clubhotelcusco.com/img/logo-black.png" alt="Club Hotel Cusco"></a>
+</footer>
+</div>

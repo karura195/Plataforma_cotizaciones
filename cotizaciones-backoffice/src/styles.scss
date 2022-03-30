@@ -4,8 +4,15 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+h2 {
+    text-align: center;
+  	color: #636363;
+}
 
 mat-form-field {
 	width: 100%;
 }
 
+.row{
+	padding: 10px;
+}

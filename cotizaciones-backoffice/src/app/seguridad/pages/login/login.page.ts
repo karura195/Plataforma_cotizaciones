@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
 	}
 
 	login():void {
-		this.router.navigate(['/home']);
+		this.router.navigate(['/cotizaciones/panel-general']);
 	}
 
 	cancelar():void {

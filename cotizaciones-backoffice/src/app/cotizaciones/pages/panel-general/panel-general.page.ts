@@ -71,4 +71,7 @@ export class PanelGeneralPage implements OnInit {
 			text: "Error al eliminar la cotización. No se puede eliminar una cotizacion en proceso."
 		});
 	}
+	exportar(): void {
+		window.open("/assets/cotizacion.docx")
+	}
 }

@@ -31,6 +31,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 //import { MatHint } from '@angular/material/hint';
 /*import {
 	MatAutocompleteModule,
@@ -84,7 +85,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 		MatButtonModule,
 		//MatButtonToggleModule,
 		MatCardModule,
-		//MatCheckboxModule,
+		MatCheckboxModule,
 		//MatChipsModule,
 		MatStepperModule,
 		MatDatepickerModule,
@@ -123,7 +124,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 		MatButtonModule,
 		//MatButtonToggleModule,
 		MatCardModule,
-		//MatCheckboxModule,
+		MatCheckboxModule,
 		//MatChipsModule,
 		MatStepperModule,
 		MatDatepickerModule,

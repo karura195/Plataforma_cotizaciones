@@ -64,6 +64,6 @@ export class ProductoListadoPage implements OnInit {
 		this.router.navigate(['/mantenimientos/producto/editar/5']);
 	}
 	eliminar(): void {
-		
+		alert("¿Desea eliminar el producto?");
 	}
 }

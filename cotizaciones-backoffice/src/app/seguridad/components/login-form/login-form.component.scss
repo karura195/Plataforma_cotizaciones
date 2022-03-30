@@ -1,13 +1,27 @@
 :host {
-	display: flex;
+	//display: flex;
 	justify-content: center;
-	margin: 100px 0px;
   }
+ 
+ section {
+	font-family: Helvetica;
+	background-color: #eee;
+	justify-content: center;
+}
 
-  .mat-form-field {
-	width: 100%;
-	min-width: 300px;
-  }
+h1,h2{
+    text-align: center;
+	color: #636363;
+	padding: 16px;
+}
+
+  mat-card{
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+    vertical-align: middle;
+}
 
   mat-card-title,
   mat-card-content {
@@ -26,3 +40,8 @@
 	display: flex;
 	justify-content: flex-end;
   }
+
+  footer { 
+	text-align: center; 
+	padding: 204px;
+}
